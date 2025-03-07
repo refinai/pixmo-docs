@@ -4,6 +4,7 @@
 __pycache__/
 *.sh
 venv/
+env/
 session_output/
 *.png
 *.html
