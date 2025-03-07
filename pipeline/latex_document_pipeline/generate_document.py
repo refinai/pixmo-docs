@@ -18,7 +18,7 @@ from ..utils.render import render_latex
 
 NUM_RENDER_WORKERS = 4
 
-os.environ['PATH'] += os.pathsep + '/usr/local/bin/latexmk'
+
 def check_pdflatex():
     from pylatex import Document, Command, NoEscape
 
