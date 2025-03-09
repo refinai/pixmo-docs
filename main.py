@@ -37,7 +37,7 @@ if __name__ == "__main__":
         "-c",
         "--code_llm",
         type=str,
-        default="claude-sonnet",
+        default="gpt-4o",
         help="LLM to use (gpt-4 or claude-sonnet) for code generation.",
     )
     parser.add_argument(
@@ -102,6 +102,13 @@ if __name__ == "__main__":
         type=bool,
         default=True,
         help="whether to generate QA for the visualizations.",
+    ),
+    parser.add_argument(
+        "-hf",
+        "--hf",
+        type=str,
+        default=os.getenv("HF_REPO"),
+        help="Huggingface repo name.",
     )
 
     args = parser.parse_args()
@@ -115,5 +122,6 @@ if __name__ == "__main__":
     print("Code Batch Size:", args.code_batch_size)
     print("Name:", args.name)
     print("Types:", args.types)
-
+    print("HuggingFace:", args.hf)
+    
     main(args)
