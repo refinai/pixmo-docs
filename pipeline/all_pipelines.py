@@ -72,6 +72,10 @@ def run_datadreamer_session(args):
         elif args.code_llm == "claude-sonnet": code_llm = claude_sonnet
         elif args.code_llm == "gpt-4o-mini": code_llm = gpt_4o_mini
 
+
+        if args.language == "English": language = "English"
+        elif args.language == "Arabic": language = "Arabic"
+
         # Choose which pipelines to run
         pipelines = {
             "Generate Matplotlib Charts": MatplotlibChartPipeline,
@@ -129,6 +133,7 @@ def run_datadreamer_session(args):
                     "seed": args.seed,
                     "figure_types": figure_types,
                     "qa": args.qa,
+                    "language": language
                 },
                 force=args.force,
             )

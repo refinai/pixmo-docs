@@ -109,6 +109,13 @@ if __name__ == "__main__":
         type=str,
         default=os.getenv("HF_REPO"),
         help="Huggingface repo name.",
+    ),
+        parser.add_argument(
+        "-l",
+        "--language",
+        type=str,
+        default="English",
+        help="Choose either English or Arabic for data generation.",
     )
 
     args = parser.parse_args()
@@ -123,5 +130,6 @@ if __name__ == "__main__":
     print("Name:", args.name)
     print("Types:", args.types)
     print("HuggingFace:", args.hf)
+    print("Language:", args.language")
     
     main(args)
