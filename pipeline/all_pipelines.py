@@ -134,6 +134,7 @@ def run_datadreamer_session(args):
                     "figure_types": figure_types,
                     "qa": args.qa,
                     "language": language
+           
                 },
                 force=args.force,
             )

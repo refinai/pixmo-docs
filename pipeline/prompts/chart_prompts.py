@@ -42,7 +42,7 @@ Here are the requirements:
 3. The data should be realistic, and the contents should be named using real-world entities. Do not use placeholder names like xxA, xxB, etc.
 4. The data should be diverse and contain multiple data points to ensure the chart is informative.
 5. Do not provide too much data. Just necessary data points to satisfy the topic and figure type.
-6. All data must be in English, even if the persona is non-English.
+6. All data must be in {language}, even if the persona is non-{language}.
 Please provide the data in JSON format without additional text at the beginning or end."""
 
 

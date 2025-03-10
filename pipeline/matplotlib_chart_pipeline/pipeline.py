@@ -22,6 +22,7 @@ class MatplotlibChartPipeline(SuperStep):
         self.register_arg("figure_types", required=True, help="The figure types to use.")
         self.register_arg("qa", required=True, help="Whether to generate Q&A.")
         self.register_arg("language", required=True, help="The language to use.")
+    
 
         self.register_output("metadata")
         self.register_output("topic")
@@ -52,6 +53,7 @@ class MatplotlibChartPipeline(SuperStep):
             inputs={
                 "metadata": generated_chart_topics.output["metadata"],
                 "topic": generated_chart_topics.output["topic"],
+               
             },
             args={
                 "llm": self.args["llm"],

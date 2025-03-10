@@ -18,6 +18,7 @@ class GenerateChartData(SuperStep):
         self.register_arg(
             "batch_size", required=True, help="The batch size to use with the LLM."
         )
+
         self.register_output("metadata")
         self.register_output("topic")
         self.register_output("data")
@@ -38,6 +39,7 @@ class GenerateChartData(SuperStep):
                     topic=row["topic"],
                     figure_type=json.loads(row["metadata"])["figure_type"],
                     persona=json.loads(row["metadata"])["persona"],
+                    language=json.loads(row["metadata"])["language"],
                 )
             },
             lazy=False,

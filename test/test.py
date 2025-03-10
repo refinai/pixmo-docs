@@ -53,7 +53,6 @@ with DataDreamer("./output"):
         .shuffle()
     )
 
-    # Publish and share the synthetic dataset
-    # movie_reviews.publish_to_hf_hub(
-    #     "datadreamer-dev/movie_reviews",
-    # )
+    movie_reviews.publish_to_hf_hub(
+        "refine-ai/test",
+    )

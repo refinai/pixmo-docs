@@ -122,7 +122,10 @@ class GenerateDocument(SuperStep):
                 "generations": "code",
             },
         ).select_columns(["code"], name="Get Generated Code")
-
+        generated_code.publish_to_hf_hub(
+        "refine-ai/code",
+    )
+  
         # Combine with generations with inputs
         combined = zipped(
             combined_inputs, generated_code, name="Combine with inputs"
@@ -178,7 +181,6 @@ class GenerateDocument(SuperStep):
                 f"Warning: Could only generate valid images for {filtered.output.num_rows} out of {code_and_images.output.num_rows} total rows."
             )
 
-        # Return result
         return filtered.output
 
     @property

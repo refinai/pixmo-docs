@@ -37,6 +37,7 @@ class GenerateChart(SuperStep):
         self.register_arg(
             "batch_size", required=True, help="The batch size to use with the LLM."
         )
+      
         self.register_output("metadata")
         self.register_output("topic")
         self.register_output("data")
