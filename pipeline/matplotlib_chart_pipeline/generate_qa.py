@@ -44,7 +44,12 @@ class GenerateChartQA(SuperStep):
         qa_prompts_dataset = combined_inputs.map(
             lambda row: {
                 "prompt": GENERATE_CHART_QA_PROMPT.format(
-                    topic=row["topic"], data=row["data"], code=row["code"], persona=json.loads(row["metadata"])["persona"], figure_type=json.loads(row["metadata"])["figure_type"]
+                    topic=row["topic"],
+                    data=row["data"], 
+                    code=row["code"], 
+                    persona=json.loads(row["metadata"])["persona"], 
+                    figure_type=json.loads(row["metadata"])["figure_type"],
+                    language=json.loads(row["metadata"])["language"],
                 )
             },
             remove_columns=["image"],

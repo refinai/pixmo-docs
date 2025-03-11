@@ -38,6 +38,8 @@ class GenerateDocumentData(SuperStep):
                     topic=row["topic"],
                     figure_type=json.loads(row["metadata"])["figure_type"],
                     persona=json.loads(row["metadata"])["persona"],
+                    language=json.loads(row["metadata"])["language"],
+
                 )
             },
             lazy=False,

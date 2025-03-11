@@ -65,8 +65,10 @@ Here is the code that generates the figure:
 
 Please come up with a list of *reasonable questions* that people will ask when they see the rendered figure. Here are the requirements:
 1. **Question Style**: The questions must be natural and related to the figure, which can help interpret the data and understand the insights.
-    (1) The questions vary in complexity. Some are easy to answer by just referring to the figure, and some are challenging and require multiple-step reasoning.
-    (2) The questions should be answerable based on the *visual information* in the figure. Don't include any coding details in the questions since this type of information is not visible in the figure.
+
+    (1) The questions must be in {language}, even if the topic is non-{language}.
+    (2) The questions vary in complexity. Some are easy to answer by just referring to the figure, and some are challenging and require multiple-step reasoning.
+    (3) The questions should be answerable based on the *visual information* in the figure. Don't include any coding details in the questions since this type of information is not visible in the figure.
 
 2. **Question Types**: Most questions are short-answer, but some can be multiple-choice, yes/no, or summary questions. You can use the following types:
     (1) Short-answer: At least 5 short-answer questions.
@@ -104,8 +106,9 @@ Instead of showing the figure, I provide the data and the code that generates th
 
 Please come up with a list of *reasonable questions* that people will ask when they see the rendered figure. Here are the requirements:
 1. **Question Style**: The questions must be natural and related to the figure, which can help interpret the data and understand the insights.
-    (1) The questions vary in complexity. Some are easy to answer by just referring to the figure, and some are challenging and require multiple-step reasoning.
-    (2) The questions should be answerable based on the *visual information* in the figure. Don't include any coding details in the questions since this type of information is not visible in the figure.
+    (1) The questions must be in {language}, even if the topic is non-{language}.
+    (2) The questions vary in complexity. Some are easy to answer by just referring to the figure, and some are challenging and require multiple-step reasoning.
+    (3) The questions should be answerable based on the *visual information* in the figure. Don't include any coding details in the questions since this type of information is not visible in the figure.
 
 2. **Question Types**: All questions should be short-answer questions that are answerable based on the visual information in the figure.
     (1) **Basic questions** ask for basic elements in the figure such as visual appearance, title, axis, ticks, colors, number of data points, etc. Remeber to use **natural language** when referring to these elements, do not use coding terms (RGB, HEX, etc.).

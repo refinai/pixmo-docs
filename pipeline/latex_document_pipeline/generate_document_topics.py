@@ -22,6 +22,9 @@ class GenerateDocumentTopics(SuperStep):
         self.register_arg("n", required=True, help="The number of personas to use.")
         self.register_arg("seed", required=True, help="The seed to use for generation.")
         self.register_arg("figure_types", required=True, help="The figure types to use.")
+        self.register_arg("language", required=True, help="The language to use.")
+
+
         self.register_output("metadata")
         self.register_output("topic")
 
@@ -53,6 +56,7 @@ class GenerateDocumentTopics(SuperStep):
                         {
                             "_pipeline": self.args["pipeline"],
                             "persona": persona,
+                            "language": self.args["language"],
                             "figure_type": random.choice(self.args["figure_types"]),
                         }
                     )
@@ -68,6 +72,8 @@ class GenerateDocumentTopics(SuperStep):
                     num_topics=NUM_TOPICS,
                     persona=json.loads(row["metadata"])["persona"],
                     figure_type=json.loads(row["metadata"])["figure_type"],
+                    language=json.loads(row["metadata"])["language"],
+
                 )
             },
             lazy=False,
